@@ -5,21 +5,21 @@ module.exports = {
   ],
   theme: {
     screens: {
-      sm: "640px",
+      sm: "480px",
       md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-      "2xl": "1536px",
+      lg: "976px",
+      xl: "1440px",
+
     },
     colors: {
       black_lighter: '#181823',
       light_gray: '#8491A0',
       dark_gray: '#5B6876',
-      yellow: '#FF8A00',
-      green: '#3CC74E',
-      pink: '#E95D90',
-      peach: '#FFF3E4',
-      violet: '#FBE4FF',
+      yellow_custom: '#FF8A00',
+      green_custom: '#3CC74E',
+      pink_custom: '#E95D90',
+      peach_custom: '#FFF3E4',
+      violet_custom: '#FBE4FF',
 
     },
     borderRadius: {
@@ -48,40 +48,9 @@ module.exports = {
       none: "none",
     },
     fontFamily: {
-      sans: [
-        "ui-sans-serif",
-        "system-ui",
-        "-apple-system",
-        "BlinkMacSystemFont",
-        '"Segoe UI"',
-        "Roboto",
-        '"Helvetica Neue"',
-        "Arial",
-        '"Noto Sans"',
-        "sans-serif",
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
-      ],
-      serif: [
-        "ui-serif",
-        "Georgia",
-        "Cambria",
-        '"Times New Roman"',
-        "Times",
-        "serif",
-      ],
-      mono: [
-        "ui-monospace",
-        "SFMono-Regular",
-        "Menlo",
-        "Monaco",
-        "Consolas",
-        '"Liberation Mono"',
-        '"Courier New"',
-        "monospace",
-      ],
+      sen:[
+        "Sen"
+      ]
     },
     maxHeight: (theme) => ({
       ...theme("spacing"),
