@@ -11,7 +11,17 @@ module.exports = {
       xl: "1280px",
       "2xl": "1536px",
     },
-    colors: {},
+    colors: {
+      black_lighter: '#181823',
+      light_gray: '#8491A0',
+      dark_gray: '#5B6876',
+      yellow: '#FF8A00',
+      green: '#3CC74E',
+      pink: '#E95D90',
+      peach: '#FFF3E4',
+      violet: '#FBE4FF',
+
+    },
     borderRadius: {
       none: "0px",
       sm: "0.125rem",
