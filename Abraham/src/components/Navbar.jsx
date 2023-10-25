@@ -7,7 +7,8 @@ export default function Navbar() {
 
 
     const onEnter = ({ currentTarget }) => {
-        gsap.to(currentTarget, { fontSize: '2rem', backgroundColor:'black', duration:0.2});
+        gsap.timeline().to(currentTarget, { fontSize: '2rem', duration:0.2})
+        .to('.active', {backgroundColor: "black", duration: 0.2});
     };
       
     const onLeave = ({ currentTarget }) => {
