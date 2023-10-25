@@ -4,13 +4,18 @@ import viteLogo from '/vite.svg'
 import HomePage from './views/HomePage'
 import './App.css'
 import Navbar from './components/Navbar'
-
+import router from './routing'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 function App() {
 
   return (
     < >
     <Navbar/>
-    <HomePage/>
+    <RouterProvider router={router} />
+
     </>
   )
 }
