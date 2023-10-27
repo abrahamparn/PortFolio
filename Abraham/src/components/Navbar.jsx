@@ -90,7 +90,7 @@ export default function Navbar() {
                 <div className='flex items-center p-6'>
                     <p className='font-bold text-lg text-yellow_custom'>ABRAHAM P.N.</p>
                 </div>
-                <div className='flex items-center justify-between md:hidden p-6' onClick={showMenu}><span className='text-yellow_custom text-xl '>☰</span></div>
+                <div className='flex items-center justify-between md:hidden p-6' onClick={showMenu}><span className='text-yellow_custom text-xl '>⛌</span></div>
             </div>
             <div className="justify-between  w-full md:flex md:w-auto md:order-1">
                     <ul className="flex flex-col md:p-0 md:flex-row m-0 p-0">
