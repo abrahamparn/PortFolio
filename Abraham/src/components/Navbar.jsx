@@ -34,9 +34,9 @@ export default function Navbar() {
             console.log('false')
             tl.current = gsap.timeline()
             tl.current
-                .fromTo('.toBeAnimated',  { opacity: 0, zIndex:-1 }, { opacity: 1, duration: 0.5, zIndex:50 })
-                .from('.insertIntoAnimation', {x: 1000, ease:"power1.out", stagger:0.3})
-                .fromTo('.active', {backgroundColor: "bg-black"}, {backgroundColor: "#FF8A00", duration: 0.2});
+                .fromTo('.toBeAnimated',  { opacity: 0, zIndex:-1 }, { opacity: 1, duration: 0.2, zIndex:50 })
+                .from('.insertIntoAnimation', {x: 1000, ease:"power1.out", stagger:0.1})
+                .fromTo('.active', {backgroundColor: "bg-black"}, {backgroundColor: "#FF8A00", duration: 0.1});
             setShowNavBarSmall(!showNavBarSmall); // Update the state after the animation
                 // .from('.randomInsert', {x:random(-1000, 0)})
         }else if(showNavBarSmall === true){
@@ -48,9 +48,9 @@ export default function Navbar() {
             });
     
             tl.current
-            .fromTo('.toBeAnimated',  { opacity: 0, zIndex:-1 }, { opacity: 1, duration: 0.5, zIndex:50 })
-            .from('.insertIntoAnimation', {x: 1000, ease:"power1.out", stagger:0.3})
-            .fromTo('.active', {backgroundColor: "bg-black"}, {backgroundColor: "#FF8A00", duration: 0.2});
+            .fromTo('.toBeAnimated',  { opacity: 0, zIndex:-1 }, { opacity: 1, duration: 0.2, zIndex:50 })
+            .from('.insertIntoAnimation', {x: 1000, ease:"power1.out", stagger:0.1})
+            .fromTo('.active', {backgroundColor: "bg-black"}, {backgroundColor: "#FF8A00", duration: 0.1});
 
         }
     }
@@ -60,22 +60,22 @@ export default function Navbar() {
         <div className=' bg-black font-sen text-bold w-screen'>
             <div className='flex justify-between sm:ms-0 sm:me-0 md:ms-4 md:me-4 lg:ms-12 lg:me-12 xl:ms-20 xl:me-20 text-white'>
                 <div className='flex items-center p-6'>
-                    <p className='font-bold text-lg'>Abraham P.N.</p>
+                    <p className='font-bold text-lg'>ABRAHAM P.N.</p>
                 </div>
     
                 <div className="justify-between hidden w-full md:flex md:w-auto md:order-1">
                     <ul className="flex flex-col md:p-0 md:flex-row m-0 p-0">
                         <li >
-                            <a href="#" className="block items-center p-6 hover:text-yellow_custom rand">Experience</a>
+                            <a href="#" className="block items-center p-6 hover:text-yellow_custom rand">EXPERIENCE</a>
                         </li>
                         <li >
-                            <a href="#" className="block items-center p-6 hover:text-yellow_custom">Work</a>
+                            <a href="#" className="block items-center p-6 hover:text-yellow_custom">WORK</a>
                         </li>
                         <li >
-                            <a href="#" className="block items-center p-6 hover:text-yellow_custom">Photography</a>
+                            <a href="#" className="block items-center p-6 hover:text-yellow_custom">PHOTOGRAPHY</a>
                         </li>
                         <li className={`${Css.active} hover:bg-black_lighter `}>
-                        <a href="#" className="block items-center p-6 hover:text-yellow_custom">Contact</a>
+                        <a href="#" className="block items-center p-6 hover:text-yellow_custom">CONTACT</a>
                         </li>
                     </ul>
                 </div>
@@ -88,23 +88,23 @@ export default function Navbar() {
 
             <div className='flex flex-row justify-between'>
                 <div className='flex items-center p-6'>
-                    <p className='font-bold text-lg text-yellow_custom'>Abraham P.N.</p>
+                    <p className='font-bold text-lg text-yellow_custom'>ABRAHAM P.N.</p>
                 </div>
                 <div className='flex items-center justify-between md:hidden p-6' onClick={showMenu}><span className='text-yellow_custom text-xl '>☰</span></div>
             </div>
             <div className="justify-between  w-full md:flex md:w-auto md:order-1">
                     <ul className="flex flex-col md:p-0 md:flex-row m-0 p-0">
                         <li className={`${showNavBarSmall? " ":"hidden"} insertIntoAnimation`} onMouseEnter={onEnter} onMouseLeave={onLeave}>
-                            <a href="#" className="block items-center p-6 hover:text-yellow_custom text-white">Experience</a>
+                            <a href="#" className="block items-center p-6 hover:text-yellow_custom text-white">EXPERIENCE</a>
                         </li>
                         <li className={`${showNavBarSmall? " ":"hidden"} insertIntoAnimation`} onMouseEnter={onEnter} onMouseLeave={onLeave}>
-                            <a href="#" className="block items-center p-6 hover:text-yellow_custom text-white">Work</a>
+                            <a href="#" className="block items-center p-6 hover:text-yellow_custom text-white">WORK</a>
                         </li>
                         <li className={`${showNavBarSmall? " ":"hidden"} insertIntoAnimation`} onMouseEnter={onEnter} onMouseLeave={onLeave}>
-                            <a href="#" className="block items-center p-6 hover:text-yellow_custom text-white">Photography</a>
+                            <a href="#" className="block items-center p-6 hover:text-yellow_custom text-white">PHOTOGRAPHY</a>
                         </li>
                         <li className={`active hover:bg-black_lighter insertIntoAnimation`} onMouseEnter={onEnter} onMouseLeave={onLeave}>
-                            <a href="#" className="block items-center p-6 hover:text-yellow_custom text-white">Contact</a>
+                            <a href="#" className="block items-center p-6 hover:text-yellow_custom text-white">CONTACT</a>
                         </li>
                     </ul>
                 </div>

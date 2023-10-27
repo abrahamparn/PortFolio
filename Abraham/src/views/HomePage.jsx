@@ -3,8 +3,9 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 export default function HomePage() {
   return (
-    <section>
+    <section className='grow '>
       <Hero/>
+
 
     </section>
   )

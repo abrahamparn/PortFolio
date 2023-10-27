@@ -12,11 +12,12 @@ import {
 function App() {
 
   return (
-    < >
+    <div className="flex flex-col min-h-screen bg-black">
+
     <Navbar/>
     <RouterProvider router={router} />
 
-    </>
+    </div>
   )
 }
 
