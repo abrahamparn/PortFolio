@@ -33,9 +33,10 @@ export default function Hero() {
       <div>
         <div className='flex flex-col gap-3 xl:gap-8 m-5 md:m-1 '>
           <h1 className='animate text-2xl/[2rem] text-left md:text-2xl/[2.5rem] lg:text-4xl/[3rem] xl:text-[3.5rem]/[5rem] font-bold font-sen'>I'm Abraham Naibrohu.<br/> A Software Engineer<br/><span className='text-light_gray'>Based in Indonesia.</span></h1>
-          <p className='animate text-left text-base/[1.5rem] md:text-lg/[1.75rem] lg:text-xl/[2rem] xl:text-2xl/[2.25rem]  font-sen'>I'm probably the most passionate programmer you will ever get to work with. If you have a great project that needs some amazing skills, I'm your guy.</p>
+          <p className='animate text-left text-base/[1.5rem] md:text-lg/[1.75rem] lg:text-xl/[2rem] xl:text-2xl/[2.25rem]  font-sen'>I'm the most passionate programmer you will ever get to work with. If you have a great project that needs some amazing skills, I'm your guy.</p>
       
         </div>
+        
       </div>
       
     </section>
