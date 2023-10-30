@@ -17,7 +17,6 @@ export default function Navbar() {
     };
 
     const [showNavBarSmall, setShowNavBarSmall] = useState(false)
-    const app = useRef();
     const tl = useRef(null);
     function showMenu() {
        
@@ -57,7 +56,7 @@ export default function Navbar() {
 
   return (
     <>
-        <div className=' bg-black font-sen text-bold w-screen'>
+        <div className=' bg-black font-sen text-bold '>
             <div className='flex justify-between sm:ms-0 sm:me-0 md:ms-4 md:me-4 lg:ms-12 lg:me-12 xl:ms-20 xl:me-20 text-white'>
                 <div className='flex items-center p-6'>
                     <p className='font-bold text-lg'>ABRAHAM P.N.</p>
