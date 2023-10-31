@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function PhilosophyValue() {
   return (
-    <section className='grid grid-cols-1 md:grid-cols-2 '>
+    <section className='grid grid-cols-1 md:grid-cols-2'>
         <div className='bg-peach_custom px-8  flex flex-col justify-between gap-20 md:gap-10'>
             <div>
                 <h2 className=' text-left text-[32px] font-bold pt-11'>Philosophy & Values</h2>
@@ -14,7 +14,7 @@ export default function PhilosophyValue() {
 
             </div>
         </div>
-        <img src='../src/assets/doomsday.jpg' className="object-cover h-auto w-full md:h-80 xl:h-96 xl:w-full"/>
+        <img src='../src/assets/doomsday.jpg' className="object-cover h-auto max-h-[32rem] w-full md:h-auto"/>
 
     </section>
   )
