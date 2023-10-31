@@ -14,7 +14,7 @@ export default function PhilosophyValue() {
 
             </div>
         </div>
-        <img src='../src/assets/doomsday.jpg'         className="object-cover h-auto w-full md:h-80 xl:h-96 xl:w-full"/>
+        <img src='../src/assets/doomsday.jpg' className="object-cover h-auto w-full md:h-80 xl:h-96 xl:w-full"/>
 
     </section>
   )
