@@ -16,6 +16,7 @@ module.exports = {
       light_gray: '#8491A0',
       dark_gray: '#5B6876',
       yellow_custom: '#FF8A00',
+      blue_custom:'#609BFF',
       green_custom: '#3CC74E',
       pink_custom: '#E95D90',
       peach_custom: '#FFF3E4',
