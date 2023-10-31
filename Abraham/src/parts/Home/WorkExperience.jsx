@@ -13,6 +13,7 @@ export default function WorkExperience() {
       }, {
         opacity:1,
         duration:3,
+        stagger: 0.5,
         scrollTrigger:{
           trigger: number.current
         }
@@ -47,8 +48,6 @@ export default function WorkExperience() {
               <p className='text-sm md:text-base'>Selected from 63k+ applicants to join Bangkit Academy 2022 in the Mobile Development learning path. Graduated with distinction with score of 98.5.</p>
             </div>
           </div>
-       
-      
     </section>
   )
 }
