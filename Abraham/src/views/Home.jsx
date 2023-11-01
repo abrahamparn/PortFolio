@@ -4,13 +4,15 @@ import Hero from '../parts/Home/Hero'
 import WorkExprience from '../parts/Home/WorkExperience'
 import PhilosophyValue from '../parts/Home/PhilosophyValue'
 import Skillset from '../parts/Home/Skillset'
+import Logos from '../parts/Home/Logos'
 export default function Home() {
   return (
     <section className='grow ' >
-      {/* <Hero/> */}
+      <Hero/>
       <WorkExprience/>
       <PhilosophyValue/>
       <Skillset/>
+      <Logos/>
 
     </section>
   )
