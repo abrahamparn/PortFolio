@@ -3,7 +3,7 @@ import ProjectCard from '../../components/ProjectCard'
 
 export default function Project() {
   return (
-    <section className='p-5 bg-black grid grid-cols-1 gap-10'>
+    <section className='p-5 bg-black ProjectCard'>
         <div>
             <p className='text-sm font-bold text-light_gray font-sen'>MY PROJECT</p>
             <p className='text-3xl font-sen font-bold text-white text-left'>Projects that I'have done so far</p>
