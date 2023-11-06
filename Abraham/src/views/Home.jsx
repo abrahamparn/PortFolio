@@ -5,6 +5,7 @@ import WorkExprience from '../parts/Home/WorkExperience'
 import PhilosophyValue from '../parts/Home/PhilosophyValue'
 import Skillset from '../parts/Home/Skillset'
 import Logos from '../parts/Home/Logos'
+import Project from '../parts/Home/Project'
 export default function Home() {
   return (
     <section className='grow ' >
@@ -13,6 +14,7 @@ export default function Home() {
       <PhilosophyValue/>
       <Skillset/>
       <Logos/>
+      <Project/>
 
     </section>
   )
