@@ -36,6 +36,11 @@ export default function Project() {
       <div className="break-inside">
         <ProjectCard />
       </div>
+      <div className="flex justify-center">
+        <button className="text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl text-white font-sen border-yellow_custom border-2 p-2 hover:bg-black_lighter hover:text-yellow_custom">
+          View All Project
+        </button>
+      </div>
     </section>
   );
 }
