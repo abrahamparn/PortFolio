@@ -9,6 +9,7 @@ import Logos from "../parts/Home/Logos";
 import Project from "../parts/Home/Project";
 import doomsday from "../assets/doomsday.jpg";
 import forInstagram from "../assets/forInstagram.png";
+import Testimony from "../parts/Home/Testimony";
 export default function Home() {
   return (
     <section className="grow ">
@@ -35,6 +36,7 @@ export default function Home() {
         picture={forInstagram}
         linkTitle="Follow me on IG"
       />
+      <Testimony />
     </section>
   );
 }
