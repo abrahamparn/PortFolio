@@ -45,7 +45,7 @@ export default function WorkExperience() {
           <p className="text-sm md:text-base">
             Created and maintained internal softwares using vb.net, electron.js,
             asp.net mvc (c# and vb), python, ssms, microsoft power technologies,
-            etc.{" "}
+            etc.
           </p>
         </div>
         <div className="flex flex-col gap-2 animateWork">

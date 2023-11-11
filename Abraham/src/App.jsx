@@ -1,17 +1,15 @@
-import { useState, useEffect } from 'react'
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import gsap from 'gsap';
+import { useState, useEffect } from "react";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import gsap from "gsap";
 
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Navbar from './components/Navbar'
-import router from './routing'
-import Lenis from '@studio-freight/lenis'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import router from "./routing";
+import Lenis from "@studio-freight/lenis";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 function App() {
   // useEffect(() => {
   //   const lenis = new Lenis()
@@ -25,12 +23,10 @@ function App() {
 
   return (
     <div className="min-h-screen bg-black">
-
-    <Navbar/>
-    <RouterProvider router={router} />
-
+      <Navbar />
+      <RouterProvider router={router} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
