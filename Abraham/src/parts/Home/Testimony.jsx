@@ -50,7 +50,7 @@ export default function Testimony() {
 
           <CardTestimony />
         </div>
-      </section>{" "}
+      </section>
       <section className="text-white p-5 lg:p-20 py-12 lg:py-20  grid-cols-1 gap-8 lg:gap-14 md:grid-cols-2 hidden md:grid">
         <div className="flex flex-col gap-5 ">
           <div className="sticky">
