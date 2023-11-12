@@ -15,10 +15,10 @@ export default function Testimony() {
         ease: "none",
         scrollTrigger: {
           start: "top 10%",
-          end: "2300px 100px",
+          end: "2000px 100px",
           pin: true,
           trigger: element,
-          markers: true,
+          //markers: true,
           start: "center center",
           toggleActions: "restart pause reverse pause",
         },
