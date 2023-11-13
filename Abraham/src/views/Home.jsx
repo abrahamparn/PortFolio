@@ -11,6 +11,7 @@ import doomsday from "../assets/doomsday.jpg";
 import forInstagram from "../assets/forInstagram.png";
 import Testimony from "../parts/Home/Testimony";
 import Photography from "../parts/Home/Photography";
+import Cta from "../parts/Home/Cta";
 export default function Home() {
   return (
     <section className="grow ">
@@ -39,6 +40,7 @@ export default function Home() {
       />
       <Testimony />
       <Photography />
+      <Cta />
     </section>
   );
 }

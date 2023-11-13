@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import router from "./routing";
 import Lenis from "@studio-freight/lenis";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
   // useEffect(() => {
@@ -25,6 +26,7 @@ function App() {
     <div className="min-h-screen bg-black">
       <Navbar />
       <RouterProvider router={router} />
+      <Footer />
     </div>
   );
 }

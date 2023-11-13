@@ -74,12 +74,12 @@ export default function Photography() {
           places all around the world.
         </p>
       </div>
-      <div className="overflow-x-auto max-h-[400px] flex flex-row gap-3 md:hidden">
+      <div className="overflow-x-auto max-h-[400px] flex flex-row gap-3 md:hidden no-scrollbar">
         {images.map((img, index) => {
           return <img src={img} key={index} />;
         })}
       </div>
-      <div className="md:show columns-3 lg:columns-4 xl:columns-5 xxl:columns-8 space-y-4  overflow-y-auto max-h-[750px] xl:max-h-[900px] xxl:max-h-[1000px] 	[@media(max-width:767px)]:scrollbar-hide">
+      <div className="hidden md:block columns-3 lg:columns-4 xl:columns-5 xxl:columns-8 space-y-4  overflow-y-auto max-h-[750px] xl:max-h-[900px] xxl:max-h-[1000px] 	[@media(max-width:767px)]:scrollbar-hide no-scrollbar">
         {images.map((img, index) => {
           return (
             <img

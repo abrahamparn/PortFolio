@@ -9,13 +9,20 @@ export default function Testimony() {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       const element = document.querySelector(".sticky");
+      const mediaQuerySm = window.matchMedia("(max-width: 768px)"); // Adjust the max-width for small screens
+      const mediaQueryLg = window.matchMedia("(max-width: 1024px)");
+      const endValue = mediaQuerySm.matches
+        ? "1400px"
+        : mediaQueryLg.matches
+        ? "1600px"
+        : "2000px";
 
       gsap.to(element, {
         y: "100%",
         ease: "none",
         scrollTrigger: {
           start: "top 10%",
-          end: "2000px 100px",
+          end: `${endValue} 100px`,
           pin: true,
           trigger: element,
           //markers: true,
