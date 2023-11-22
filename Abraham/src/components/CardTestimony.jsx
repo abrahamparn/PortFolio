@@ -1,5 +1,5 @@
 import React from "react";
-import forInstagram from "../../src/assets/forInstagram.png";
+import forInstagram from "../assets/forInstagram.png";
 export default function CardTestimony() {
   return (
     <div>
