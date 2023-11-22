@@ -1,5 +1,5 @@
 import React from "react";
-import abraham_radial from "../assets/abraham_radial_square.png";
+import abraham_radial from "../assets/abraham_radial_Square.png";
 export default function ProjectCard() {
   return (
     <div className="bg-black_lighter ">
