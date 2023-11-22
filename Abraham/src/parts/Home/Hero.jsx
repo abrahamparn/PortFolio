@@ -4,6 +4,7 @@ import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import { useAsyncError } from "react-router-dom";
 import abraham_radial from "../../assets/abraham_radial.png";
 import abraham_kotak from "../../assets/abraham_kotak.png";
+import cv from "../../assets/files/CV.pdf";
 export default function Hero() {
   const app = useRef(); // create a ref for the root level element (for scoping)
   const circle = useRef();
@@ -46,6 +47,13 @@ export default function Hero() {
             If you have a great project that needs some amazing skills, I'm your
             guy.
           </p>
+          <div className="flex justify-center mb-4 mt-4">
+            <a href={cv} target="_blank">
+              <button className="font-sen text-base/[1.5rem] md:text-lg/[1.75rem] lg:text-xl/[2rem] xl:text-2xl/[2.25rem] p-2 border-2 border-yellow_custom text-yellow_custom hover:border-black_lighter hover:bg-yellow_custom hover:text-white active:text-yellow_custom active:bg-white">
+                GET MY CV
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
