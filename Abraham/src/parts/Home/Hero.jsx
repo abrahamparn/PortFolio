@@ -14,11 +14,7 @@ export default function Hero() {
     let ctx = gsap.context(() => {
       // Our animations can use selector text like ".box"
       // this will only select '.box' elements that are children of the component
-      gsap.fromTo(
-        ".animate",
-        { opacity: 0 },
-        { opacity: 1, duration: 2, stagger: 0.3 }
-      );
+      gsap.fromTo(".animate", { opacity: 0 }, { opacity: 1, duration: 2, stagger: 0.3 });
       // or we can use refs
     }, app); // <- IMPORTANT! Scopes selector text
 
@@ -28,7 +24,7 @@ export default function Hero() {
   return (
     <section
       ref={app}
-      className="bg-black_lighter text-white grid grid-cols-1 justify-center md:grid-cols-2 md:items-center md:gap-10 md:p-10 xl:gap-5 xl:p-20"
+      className="bg-black h-screen text-white grid grid-cols-1 justify-center md:grid-cols-2 md:items-center md:gap-10 md:p-10 xl:gap-5 xl:p-20"
     >
       <div className="flex justify-center ">
         <img className="hidden md:flex" src={abraham_radial} />
@@ -38,14 +34,13 @@ export default function Hero() {
         <div className="flex flex-col gap-3 xl:gap-8 m-5 md:m-1 ">
           <h1 className="animate text-2xl/[2rem] text-left md:text-2xl/[2.5rem] lg:text-4xl/[3rem] xl:text-[3.5rem]/[5rem] font-bold font-sen">
             I'm Abraham Naibrohu.
-            <br /> A Software Engineer
+            <br /> I like coding.
             <br />
             <span className="text-light_gray">Based in Indonesia.</span>
           </h1>
           <p className="animate text-left text-base/[1.5rem] md:text-lg/[1.75rem] lg:text-xl/[2rem] xl:text-2xl/[2.25rem]  font-sen">
-            I'm the most passionate programmer you will ever get to work with.
-            If you have a great project that needs some amazing skills, I'm your
-            guy.
+            I'm the most passionate programmer you will ever get to work with. If you have a great
+            project that needs some passionate coder, I'm your guy.
           </p>
           <div className="flex justify-center mb-4 mt-4">
             <a href={cv} target="_blank">

@@ -1,46 +1,160 @@
 import React from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+import { useLayoutEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
 import ProjectCard from "../../components/ProjectCard";
 
 export default function Project() {
+  let projectRef = useRef(null);
+  let projectSectionRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.timeline({
+      scrollTrigger: {
+        pin: projectRef.current,
+        trigger: projectSectionRef.current,
+        start: "top top",
+        end: "bottom bottom",
+      },
+    });
+  }, []);
+
   return (
-    <section className="p-5 xl:p-10 xxl:p-16 bg-black columns-1  space-y-7 md:columns-4 md:gap-5  xxl:columns-5 xxl:gap-16 md:space-y-10">
-      <div>
-        <p className="text-sm mb:text-base lg:text-lg xl:text-xl font-bold text-light_gray font-sen ">
-          MY PROJECT
-        </p>
-        <p className="text-3xl mb:text-4xl lg:text-5xl xl:text-6xl font-sen font-bold text-white text-left">
-          Projects that I'have done so far
-        </p>
-      </div>
-      <div className="break-inside">
-        <ProjectCard />
-      </div>
-      <div className="break-inside">
-        <ProjectCard />
-      </div>
-      <div className="break-inside">
-        <ProjectCard />
-      </div>
-      <div className="break-inside">
-        <ProjectCard />
-      </div>
-      <div className="break-inside">
-        <ProjectCard />
-      </div>
-      <div className="break-inside">
-        <ProjectCard />
-      </div>
-      <div className="break-inside">
-        <ProjectCard />
-      </div>
-      <div className="break-inside">
-        <ProjectCard />
-      </div>
-      <div className="flex justify-center">
-        <button className="text-base md:text-lg lg:text-xl xl:text-2xl xxl:text-3xl text-white font-sen border-yellow_custom border-2 p-2 hover:bg-black_lighter hover:text-yellow_custom">
-          View All Project
-        </button>
-      </div>
-    </section>
+    <div id="projects">
+      <section
+        className="text-white p-5 lg:p-20 py-12 lg:py-20 grid grid-cols-1 gap-8 lg:gap-14 md:grid-cols-2 md:hidden"
+        ref={projectSectionRef}
+      >
+        <div className="flex flex-col gap-5  ">
+          <div className="sticky" ref={projectRef}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl xxl:text-8xl font-sen font-bold">
+              MY PROJECTS
+            </h2>
+            <p className="text-base md:text-xl/9 lg:text-2xl/10 xl:text-3xl/[50px] xxl:text-6xl/[80px] text-light_gray ">
+              Projects that I'have done so far.
+            </p>
+          </div>
+        </div>
+
+        <div className="columns-1 space-y-4 md:space-y-8">
+          <ProjectCard
+            pictureUrl={"./projects/WMDEVELOPER.png"}
+            titleProject={"wmdeveloper"}
+            descriptionProject={
+              "A modern, simple, and seamless design for wmdeveloper. Made using react"
+            }
+            linkUrl={"https://www.wmdeveloper.com"}
+          />
+          <ProjectCard
+            pictureUrl={"./projects/appleClone.png"}
+            titleProject={"Apple Clone"}
+            descriptionProject={
+              "Cloning apple website to showcase that I am able to utilize gsap animation. Made using react"
+            }
+            linkUrl={"https://www.abrahamnaiborhu.com"}
+          />
+          <ProjectCard
+            pictureUrl={"./projects/awardWinningClone.png"}
+            titleProject={"awad winning clone"}
+            descriptionProject={
+              "a clone to gaming website which is heavily animated. Made using react"
+            }
+            linkUrl={"https://www.abrahamnaiborhu.com"}
+          />
+          <ProjectCard
+            pictureUrl={"./projects/kedaiLantaiKayu.png"}
+            titleProject={"kedai lantai kayu"}
+            descriptionProject={
+              "One of our client that sells interior wood flooring and vinly. Made using wordpress"
+            }
+            linkUrl={"https://www.kedailantaikayu.com"}
+          />
+          <ProjectCard
+            pictureUrl={"./projects/mkstorejastip.png"}
+            titleProject={"MkStore Jastip"}
+            descriptionProject={
+              "One of our client website that offers goods delivery service. Made using wordpress"
+            }
+            linkUrl={"https://www.mkstorejastip.com"}
+          />
+          <ProjectCard
+            pictureUrl={"./projects/duta8mengemudi.png"}
+            titleProject={"Duta 8 Mengemudi"}
+            descriptionProject={
+              "One of our client website that offers driving lessons. Made using wordpress"
+            }
+            linkUrl={"https://www.duta8mengemudi.com"}
+          />
+        </div>
+      </section>
+      <section
+        className="text-white p-5 lg:p-20 py-12 lg:py-20  grid-cols-1 gap-8 lg:gap-14 md:grid-cols-2 hidden md:grid"
+        ref={projectSectionRef}
+      >
+        <div className="flex flex-col gap-5">
+          <div className="sticky" ref={projectRef}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl xxl:text-8xl font-sen font-bold text-center">
+              MY PROJECTS
+            </h2>
+            <p className="text-base md:text-xl/9 lg:text-2xl/10 xl:text-3xl/[50px] xxl:text-6xl/[80px] text-light_gray text-center">
+              Projects that I'have done so far.
+            </p>
+          </div>
+        </div>
+
+        <div className="columns-1 space-y-4 md:space-y-8">
+          <ProjectCard
+            pictureUrl={"./projects/WMDEVELOPER.png"}
+            titleProject={"wmdeveloper"}
+            descriptionProject={
+              "A modern, simple, and seamless design for wmdeveloper. Made using react"
+            }
+            linkUrl={"https://www.wmdeveloper.com"}
+          />
+          <ProjectCard
+            pictureUrl={"./projects/appleClone.png"}
+            titleProject={"Apple Clone"}
+            descriptionProject={
+              "Cloning apple website to showcase that I am able to utilize gsap animation. Made using react"
+            }
+            linkUrl={"https://www.abrahamnaiborhu.com"}
+          />
+          <ProjectCard
+            pictureUrl={"./projects/awardWinningClone.png"}
+            titleProject={"awad winning clone"}
+            descriptionProject={
+              "a clone to gaming website which is heavily animated. Made using react"
+            }
+            linkUrl={"https://www.abrahamnaiborhu.com"}
+          />
+          <ProjectCard
+            pictureUrl={"./projects/kedaiLantaiKayu.png"}
+            titleProject={"kedai lantai kayu"}
+            descriptionProject={
+              "One of our client that sells interior wood flooring and vinly. Made using wordpress"
+            }
+            linkUrl={"https://www.kedailantaikayu.com"}
+          />
+          <ProjectCard
+            pictureUrl={"./projects/mkstorejastip.png"}
+            titleProject={"MkStore Jastip"}
+            descriptionProject={
+              "One of our client website that offers goods delivery service. Made using wordpress"
+            }
+            linkUrl={"https://www.mkstorejastip.com"}
+          />
+          <ProjectCard
+            pictureUrl={"./projects/duta8mengemudi.png"}
+            titleProject={"Duta 8 Mengemudi"}
+            descriptionProject={
+              "One of our client website that offers driving lessons. Made using wordpress"
+            }
+            linkUrl={"https://www.duta8mengemudi.com"}
+          />
+        </div>
+      </section>
+    </div>
   );
 }

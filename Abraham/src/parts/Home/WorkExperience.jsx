@@ -1,76 +1,125 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import one from "../../assets/numbers/01.png";
-import two from "../../assets/numbers/02.png";
-import three from "../../assets/numbers/03.png";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
 gsap.registerPlugin(ScrollTrigger);
+
 export default function WorkExperience() {
   const number = useRef(null);
+  const titleWorkExperienceRef = useRef(null);
+  const workExperienceSectionRef = useRef(null);
+  const descriptionWorkExperienceRef = useRef(null);
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.fromTo(
-        ".animateWork",
-        {
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-          duration: 3,
-          stagger: 0.5,
-          scrollTrigger: {
-            trigger: number.current,
-          },
-        }
-      );
+  useGSAP(() => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: workExperienceSectionRef.current,
+        start: "top 80%",
+        end: "bottom top",
+        toggleActions: "play none none reverse",
+      },
     });
-    return () => ctx.revert(); // cleanup
+
+    tl.fromTo(titleWorkExperienceRef.current, { x: -300 }, { x: 0, duration: 1 })
+      .fromTo(descriptionWorkExperienceRef.current, { x: -1000 }, { x: 0, duration: 1 }, "0")
+      .fromTo(".animateWork", { opacity: 0 }, { opacity: 1, duration: 1.5, stagger: 0.3 }, "<0.5");
   }, []);
 
   return (
-    <section className="flex flex-col px-5 py-16 md:px-10 lg:px-14 xl:px-20 font-sen text-white ">
-      <p className="text-light_gray text-base md:text-xl">WORK EXPERIENCE</p>
-      <p className=" text-3xl md:text-4xl font-bold font-sen">
+    <section
+      id="experience"
+      className="bg-black_lighter flex flex-col px-5 py-16 md:px-10 lg:px-14 xl:px-20 font-sen text-white"
+      ref={workExperienceSectionRef}
+    >
+      <p ref={titleWorkExperienceRef} className="text-white text-base md:text-xl">
+        WORK EXPERIENCE
+      </p>
+      <p
+        className="text-4xl md:text-5xl mb-4 font-bold font-sen"
+        ref={descriptionWorkExperienceRef}
+      >
         Experience that I have gained so far.
       </p>
 
-      <div className=" py-10 flex flex-col lg:flex-row gap-16" ref={number}>
+      {/* Updated Layout: Flex Column to Grid Columns on Large Screens */}
+      <div className="py-10 grid grid-cols-1 lg:grid-cols-2 gap-16" ref={number}>
+        {/* First Card */}
         <div className="flex flex-col gap-2 animateWork">
-          <img className="w-32" src={one} />
-          <h2 className="text-xl md:text-2xl font-bold ">
-            <span className="text-green_custom">Mattel</span>, Software Engineer
-            Intern
+          <div className="flex flex-row gap-3">
+            <img className="w-16" src={"/numbers/noun-zero.svg"} alt="Number 0" />
+            <img className="w-16" src={"/numbers/noun-one.svg"} alt="Number 1" />
+          </div>
+          <h2 className="text-xl md:text-2xl font-bold">
+            <span className="text-pink_custom">Hand Global</span>, Netsuite Technical{" "}
+            <span className="text-pink_custom">- NOW</span>
           </h2>
           <p className="text-sm md:text-base">
-            Created and maintained internal softwares using vb.net, electron.js,
-            asp.net mvc (c# and vb), python, ssms, microsoft power technologies,
-            etc.
+            Integrated NetSuite with other ERP systems to enhance functionality, streamline
+            operations, and provided technical support and training for new features.
           </p>
         </div>
+
+        {/* Second Card */}
         <div className="flex flex-col gap-2 animateWork">
-          <img className="w-32" src={two} />
-          <h2 className="text-xl md:text-2xl  font-bold ">
-            <span className="text-blue_custom">Tanamin</span>, Co-founder and
-            mobile developer
+          <div className="flex flex-row gap-3">
+            <img className="w-16" src={"/numbers/noun-zero.svg"} alt="Number 0" />
+            <img className="w-16" src={"/numbers/noun-two.svg"} alt="Number 2" />
+          </div>
+          <h2 className="text-xl md:text-2xl font-bold">
+            <span className="text-green_custom">Mattel</span>, Software Engineer Intern
           </h2>
           <p className="text-sm md:text-base">
-            Co-founded the startup and served as the mobile developer with
-            funding from both Google and the government, totaling IDR 140
-            million.
+            Created and maintained internal software using VB.NET, Electron.js, ASP.NET MVC (C# and
+            VB), Python, SSMS, Microsoft Power Technologies, etc.
+          </p>
+        </div>
+
+        {/* Third Card */}
+        <div className="flex flex-col gap-2 animateWork">
+          <div className="flex flex-row gap-3">
+            <img className="w-16" src={"/numbers/noun-zero.svg"} alt="Number 0" />
+            <img className="w-16" src={"/numbers/noun-three.svg"} alt="Number 3" />
+          </div>
+          <h2 className="text-xl md:text-2xl font-bold">
+            <span className="text-blue_custom">Tanamin</span>, Co-founder and Mobile Developer
+          </h2>
+          <p className="text-sm md:text-base">
+            Co-founded the startup and served as the mobile developer with funding from both Google
+            and the government, totaling IDR 140 million.
+          </p>
+        </div>
+
+        {/* Fourth Card */}
+        <div className="flex flex-col gap-2 animateWork">
+          <div className="flex flex-row gap-3">
+            <img className="w-16" src={"/numbers/noun-zero.svg"} alt="Number 0" />
+            <img className="w-16" src={"/numbers/noun-four.svg"} alt="Number 4" />
+          </div>
+          <h2 className="text-xl md:text-2xl font-bold">
+            <span className="text-yellow_custom">Bangkit Academy</span>, Android Learning Path
+          </h2>
+          <p className="text-sm md:text-base">
+            Selected from 63k+ applicants to join Bangkit Academy 2022 in the Mobile Development
+            learning path. Graduated with distinction with a score of 98.5.
           </p>
         </div>
 
         <div className="flex flex-col gap-2 animateWork">
-          <img className="w-32" src={three} />
-          <h2 className="text-xl md:text-2xl  font-bold ">
-            <span className="text-yellow_custom">Bangkit Academy</span>, Android
-            Learning path
+          <div className="flex flex-row gap-3">
+            <img className="w-16" src={"/numbers/noun-zero.svg"} alt="Number 0" />
+            <img className="w-16" src={"/numbers/noun-five.svg"} alt="Number 4" />
+          </div>
+          <h2 className="text-xl md:text-2xl font-bold">
+            <span className="text-dark_gray">WMDeveloper</span>, Website Developer{" "}
+            <span className="text-violet_custom">- Now</span>
           </h2>
           <p className="text-sm md:text-base">
-            Selected from 63k+ applicants to join Bangkit Academy 2022 in the
-            Mobile Development learning path. Graduated with distinction with
-            score of 98.5.
+            A website agency that can create any website for any business requirements. Visit the
+            website at{" "}
+            <a href="https://wmdeveloper.com" className="text-yellow_custom hover:text-blue_custom">
+              wmdeveloper.com
+            </a>
           </p>
         </div>
       </div>

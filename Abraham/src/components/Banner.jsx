@@ -14,15 +14,16 @@ export default function Banner(props) {
           </p>
         </div>
         <div className="pb-10">
-          <Link className="underline underline-offset-[15px] lg:text-lg xl:text-2xl hover:text-yellow_custom">
+          <a
+            className="underline underline-offset-[15px] lg:text-lg xl:text-2xl hover:text-yellow_custom"
+            href="https://instagram.com/abraham_pn"
+            target="_blank"
+          >
             {props.linkTitle}
-          </Link>
+          </a>
         </div>
       </div>
-      <img
-        src={props.picture}
-        className="object-cover h-auto max-h-[32rem] w-full md:h-auto"
-      />
+      <img src={props.picture} className="object-cover h-auto max-h-[32rem] w-full md:h-auto" />
     </section>
   );
 }

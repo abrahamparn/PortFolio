@@ -11,10 +11,11 @@
     "netlify": "netlify",
     "netlifyLogin": "netlify login",
     "netlifyStopTelemetry": "netlify --telemetry-disable",
-    "netlifyInit" : "netlify init",
-    "netlifyUnlink" : "netlify unlink"
+    "netlifyInit": "netlify init",
+    "netlifyUnlink": "netlify unlink"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
     "@react-spring/parallax": "^9.7.3",
     "@studio-freight/lenis": "^1.0.27",
     "flowbite": "^1.8.1",
@@ -22,6 +23,7 @@
     "gsap": "^3.12.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.4.0",
     "react-router-dom": "^6.17.0",
     "react-scroll-parallax": "^3.4.3",
     "tailwind-scrollbar-hide": "^1.1.7"

@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <section className="grow ">
       <Hero />
-      <WorkExprience />
-      <Banner
+      <WorkExprience id="experience" />
+      {/* <Banner
         title="Philosophy & Values"
         body="   I think everyone wants the same thing - relationship with humanity,
             peace with the metaphysical, and experience with the universe. I try
@@ -25,7 +25,7 @@ export default function Home() {
             hospitality."
         picture={doomsday}
         linkTitle="More About Me"
-      />
+      /> */}
       <Skillset />
       <Logos />
       <Project />

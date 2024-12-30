@@ -64,14 +64,14 @@ export default function Photography() {
     _30,
   ];
   return (
-    <section className="text-white px-5 py-5">
+    <section className="text-white px-5 py-5" id="photography">
       <div className="flex flex-col gap-3 md:gap-4 mb-5 md:mb-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl xxl:text-8xl font-sen font-bold">
           Photography
         </h2>
         <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl xxl:text-5xl">
-          Here is a collection of my best pictures that I took while travelling
-          places all around the world.
+          Here is a collection of my best pictures that I took while travelling places all around
+          the world.
         </p>
       </div>
       <div className="overflow-x-auto max-h-[400px] flex flex-row gap-3 md:hidden no-scrollbar">
