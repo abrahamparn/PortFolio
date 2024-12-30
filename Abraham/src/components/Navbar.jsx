@@ -2,14 +2,47 @@ import Css from "./Navbar.module.css";
 
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { useWindowScroll } from "react-use";
 
 export default function Navbar() {
+  const navContainerRef = useRef(null);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isNavVisible, setIsNavVisible] = useState(true);
+
+  const { y: currentScrollY } = useWindowScroll();
+
   const onEnter = ({ currentTarget }) => {
     gsap
       .timeline()
       .to(currentTarget, { fontSize: "2rem", duration: 0.2 })
       .to(".active", { backgroundColor: "black", duration: 0.2 });
   };
+
+  useEffect(() => {
+    if (currentScrollY === 0) {
+      // Topmost position: show navbar without floating-nav
+      setIsNavVisible(true);
+      navContainerRef.current.classList.remove("floating-nav");
+    } else if (currentScrollY > lastScrollY) {
+      // Scrolling down: hide navbar and apply floating-nav
+      setIsNavVisible(false);
+      navContainerRef.current.classList.add("floating-nav");
+    } else if (currentScrollY < lastScrollY) {
+      // Scrolling up: show navbar with floating-nav
+      setIsNavVisible(true);
+      navContainerRef.current.classList.add("floating-nav");
+    }
+
+    setLastScrollY(currentScrollY);
+  }, [currentScrollY, lastScrollY]);
+
+  useEffect(() => {
+    gsap.to(navContainerRef.current, {
+      y: isNavVisible ? 0 : -100,
+      opacity: isNavVisible ? 1 : 0,
+      duration: 0.2,
+    });
+  }, [isNavVisible]);
 
   const onLeave = ({ currentTarget }) => {
     gsap
@@ -78,7 +111,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className=" bg-black font-sen text-bold ">
+      <div className=" bg-black font-sen text-bold fixed inset-x-0  z-50" ref={navContainerRef}>
         <div className="flex justify-between sm:ms-0 sm:me-0 md:ms-4 md:me-4 lg:ms-12 lg:me-12 xl:ms-20 xl:me-20 text-white">
           <div className="flex items-center p-6">
             <p className="font-bold text-lg">ABRAHAM P.N.</p>
@@ -120,6 +153,8 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* Navbar for phone */}
       <div
         className={`toBeAnimated bg-black flex flex-col font-sen text-bold w-screen fixed top-0 left-0 h-screen  md:hidden ${
           showNavBarSmall ? " " : "hidden"

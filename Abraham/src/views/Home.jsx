@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <section className="grow ">
       <Hero />
-      <WorkExprience id="experience" />
+      <WorkExprience />
       {/* <Banner
         title="Philosophy & Values"
         body="   I think everyone wants the same thing - relationship with humanity,
