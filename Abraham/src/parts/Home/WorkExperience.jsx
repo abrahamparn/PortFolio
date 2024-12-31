@@ -108,7 +108,7 @@ export default function WorkExperience() {
         <div className="flex flex-col gap-2 animateWork">
           <div className="flex flex-row gap-3">
             <img className="w-16" src={"/numbers/noun-zero.svg"} alt="Number 0" />
-            <img className="w-16" src={"/numbers/noun-five.svg"} alt="Number 4" />
+            <img className="w-16" src={"/numbers/noun-five.svg"} alt="Number 5" />
           </div>
           <h2 className="text-xl md:text-2xl font-bold">
             <span className="text-dark_gray">WMDeveloper</span>, Website Developer{" "}
