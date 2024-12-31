@@ -8,50 +8,34 @@ export default function Logos() {
   const logoRef = useRef(null);
   const textRef = useRef(null);
   let text = "Abraham Pardomuan Naiborhu";
-  useGSAP(
-    (context, contextSafe) => {
-      let tl = gsap.timeline();
-      tl.fromTo(
+  useGSAP(() => {
+    let tl = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: logoRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          toggleActions: "play reverse play reverse",
+        },
+      })
+      .fromTo(
         textRef.current.querySelectorAll("span"),
         {
-          x: () => gsap.utils.random(-1000, 1000, 50), // Random x between -1000 and 1000 with steps of 50
-          y: () => gsap.utils.random(-200, 200, 50), // Optional: Random y between -200 and 200
-          rotate: () => gsap.utils.random(-720, 720, 45), // Optional: Random rotation between -720 and 720 degrees
-          opacity: 0,
+          x: -12,
+          y: -20,
         },
         {
+          opacity: 1,
           x: 0,
           y: 0,
-          rotate: 0,
-          opacity: 1,
-          duration: 1.5,
-          ease: "power2.out",
-          stagger: {
-            each: 0.05,
-            from: "random",
-          },
+          duration: 0.2,
+          stagger: 0.2,
           repeat: -1,
-          yoyo: true,
-          delay: 0.5,
-          scrollTrigger: {
-            trigger: logoRef.current,
-            start: "top bottom",
-            end: "bottom 30%",
-            onEnter: () => tl.play(),
-            onLeave: () => tl.pause(),
-            onEnterBack: () => tl.play(),
-            onLeaveBack: () => tl.pause(),
-          },
         }
       );
-    },
-    { scope: logoRef }
-  );
+  }, []);
   return (
-    <section
-      className="overflow-hidden py-3 md:py-8 lg:py-14 xl:py-20 bg-yellow_custom"
-      ref={logoRef}
-    >
+    <section className="py-3 md:py-8 lg:py-14 xl:py-20 bg-yellow_custom" ref={logoRef}>
       <p
         className="text-base md:text-3xl lg:text-5xl xl:text-8xl font-italic text-center font-sen text-white"
         ref={textRef}
@@ -61,7 +45,7 @@ export default function Logos() {
             return <br key={index} />;
           }
           return (
-            <span key={index} className="opacity-1 inline-block">
+            <span key={index} className="opacity-0">
               {char === " " ? "\u00A0" : char}
             </span>
           );
