@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import one from "../../assets/numbers/noun-one.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,7 +49,7 @@ export default function WorkExperience() {
         <div className="flex flex-col gap-2 animateWork">
           <div className="flex flex-row gap-3">
             <img className="w-16" src={"/numbers/noun-zero.svg"} alt="Number 0" />
-            <img className="w-16" src={"/numbers/noun-one.svg"} alt="Number 1" />
+            <img className="w-16" src={one} alt="Number 1" />
           </div>
           <h2 className="text-xl md:text-2xl font-bold">
             <span className="text-pink_custom">Hand Global</span>, Netsuite Technical{" "}
